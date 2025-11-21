@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>음악 페이지</title>
+
+    <!-- 외부 CSS 파일 연결 -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <!-- 헤더 (배경색: 분홍색으로 변경됨) -->
+    <header>
+        <h1>나의 음악 페이지</h1>
+    </header>
+
+    <main>
+
+        <!-- 첫 번째 노래 섹션 -->
+        <section class="music-section">
+
+            <h2>🎵 첫 번째 노래</h2>
+
+            <!-- 유튜브 영상 (사용자가 링크 변경 가능하도록 주석 추가) -->
+            <!-- 아래 src 안의 유튜브 영상 ID만 변경하면 됨 -->
+            <iframe 
+                width="560" height="315"
+                src="https://www.youtube.com/embed/여기에_첫번째_영상_ID를_넣으세요" 
+                allowfullscreen>
+            </iframe>
+
+            <!-- 유튜브 원본 링크 (클릭용) -->
+            <!-- 아래 href 링크만 교체하면 됨 -->
+            <p>
+                <a href="https://www.youtube.com/watch?v=여기에_첫번째_영상_ID를_넣으세요" target="_blank">
+                    첫 번째 노래 보러가기
+                </a>
+            </p>
+
+            <!-- 반복해서 교차로 나타날 이미지 (우크렐레 1,2 번갈아 표시) -->
+            <!-- 파일 이름만 교체하면 됨 -->
+            <div class="image-rotation-ukulele">
+                <img src="ukulele1.jpg" alt="우크렐레 1">
+                <img src="ukulele2.jpg" alt="우크렐레 2">
+            </div>
+
+        </section>
+
+
+
+        <!-- 두 번째 노래 섹션 -->
+        <section class="music-section second-song">
+
+            <h2>🎸 두 번째 노래</h2>
+
+            <!-- 유튜브 영상 (사용자가 링크 변경 가능하도록 주석 추가) -->
+            <iframe 
+                width="560" height="315"
+                src="https://www.youtube.com/embed/여기에_두번째_영상_ID를_넣으세요" 
+                allowfullscreen>
+            </iframe>
+
+            <!-- 유튜브 원본 링크 -->
+            <p>
+                <a href="https://www.youtube.com/watch?v=여기에_두번째_영상_ID를_넣으세요" target="_blank">
+                    두 번째 노래 보러가기
+                </a>
+            </p>
+
+            <!-- 일렉기타 이미지 2,3 번갈아 표시 -->
+            <div class="image-rotation-guitar">
+                <img src="electric2.jpg" alt="일렉기타 2">
+                <img src="electric3.jpg" alt="일렉기타 3">
+            </div>
+
+        </section>
+
+
+        <!-- 테이블 (원래 디자인 유지) -->
+        <section>
+            <h2>📋 정보 테이블</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>예시 1</td>
+                        <td>여기에 내용을 적으세요</td>
+                    </tr>
+
+                    <tr>
+                        <td>예시 2</td>
+                        <td>여기에 내용을 적으세요</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+</html>

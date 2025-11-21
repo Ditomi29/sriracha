@@ -1,0 +1,125 @@
+/* 페이지 전체 기본 스타일 */
+body {
+    font-family: "Nanum Gothic", sans-serif; /* 폰트는 안정적인 한글용 추천 폰트 */
+    margin: 0;
+    background-color: #fff;
+}
+
+/* 헤더 - 분홍색으로 수정됨 */
+header {
+    background-color: pink; /* ← 헤더 색을 수정하고 싶으면 이 부분 변경 */
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 섹션 기본 스타일 */
+.music-section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+/* 테이블 스타일 (원래의 기본 디자인 유지) */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+thead {
+    background-color: #eee;
+}
+
+
+/* ------------------------------- */
+/* 우크렐레 이미지 교차 표시      */
+/* ------------------------------- */
+
+.image-rotation-ukulele img {
+    width: 200px;
+    display: none;
+}
+
+/* 첫 번째 이미지 보이기 */
+.image-rotation-ukulele img:nth-child(1) {
+    animation: swapUkulele 2s infinite;
+}
+
+/* 두 번째 이미지 보이기 */
+.image-rotation-ukulele img:nth-child(2) {
+    animation: swapUkulele2 2s infinite;
+}
+
+@keyframes swapUkulele {
+    0%, 50% { display: block; }
+    51%, 100% { display: none; }
+}
+
+@keyframes swapUkulele2 {
+    0%, 50% { display: none; }
+    51%, 100% { display: block; }
+}
+
+
+/* ------------------------------- */
+/* 일렉기타 이미지 교차 표시       */
+/* ------------------------------- */
+
+.image-rotation-guitar img {
+    width: 230px;
+    display: none;
+}
+
+/* 2번 기타 */
+.image-rotation-guitar img:nth-child(1) {
+    animation: swapGuitar 2s infinite;
+}
+
+/* 3번 기타 */
+.image-rotation-guitar img:nth-child(2) {
+    animation: swapGuitar2 2s infinite;
+}
+
+@keyframes swapGuitar {
+    0%, 50% { display: block; }
+    51%, 100% { display: none; }
+}
+
+@keyframes swapGuitar2 {
+    0%, 50% { display: none; }
+    51%, 100% { display: block; }
+}
+
+
+/* -------------------------------------- */
+/* 두 번째 노래 배경 360도 회전 (6초 주기) */
+/* -------------------------------------- */
+
+.second-song {
+    animation: rotateBackground 6s linear infinite;
+}
+
+/* 회전 애니메이션 */
+@keyframes rotateBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 두 번째 노래의 폰트 색 → 빨간색 */
+.second-song h2,
+.second-song p,
+.second-song a {
+    color: red; /* 폰트 색 수정하고 싶으면 이 부분 */
+}
+

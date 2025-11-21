@@ -1,0 +1,151 @@
+/* ==========================================================
+   기본 설정
+========================================================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+}
+
+/* 손글씨 폰트 (첫 번째 노래용) */
+.handwrite {
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+/* 강한 폰트 (두 번째 노래용) */
+.rock-font {
+    font-family: 'Anton', sans-serif;
+}
+
+/* 헤더 디자인 */
+header {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 30px 0;
+}
+
+
+
+/* ==========================================================
+   섹션 공통 디자인
+========================================================== */
+.song-section {
+    padding: 40px 20px;
+    margin-bottom: 60px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 첫 번째 곡 배경 – IMG_4106.JPG */
+#song1 {
+    background-image: url("오픈소스 과제 사진/IMG_4106.JPG");
+}
+
+/* 두 번째 곡 배경 – 노래2 배경.jpg */
+#song2 {
+    background-image: url("오픈소스 과제 사진/노래2 배경.jpg");
+}
+
+
+
+.song-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.song-description {
+    max-width: 700px;
+    font-size: 22px;
+}
+
+
+
+/* ==========================================================
+   유튜브 영상
+========================================================== */
+.youtube-wrapper {
+    margin-top: 40px;
+}
+
+
+
+/* ==========================================================
+   테이블 = 기타줄 스타일
+========================================================== */
+.music-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    backdrop-filter: blur(3px);
+}
+
+/* 테이블 헤더 */
+.music-table th {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 10px;
+}
+
+
+/* ================= 우크렐레 줄 스타일 ================= */
+.uke-strings td {
+    padding: 15px;
+    border-bottom: 4px solid white; /* 우크렐레 줄 = 하얀색 */
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ================= 일렉기타 줄 스타일 ================= */
+.guitar-strings td {
+    padding: 15px;
+    border-bottom: 4px solid #c0c0c0; /* 기타 줄 = 은색 */
+    background: rgba(255, 0, 0, 0.25); /* 붉은 느낌 */
+}
+
+
+
+/* ==========================================================
+   애니메이션 정의
+========================================================== */
+
+/* 우크렐레: 약하게(1) 흔들림 */
+@keyframes ukeShake1 {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 우크렐레: 중간(2) 흔들림 */
+@keyframes ukeShake2 {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-7px); }
+    100% { transform: translateY(0px); }
+}
+
+
+/* 기타: 중간(2) 흔들림 */
+@keyframes guitarShake2 {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 기타: 강하게(3) 흔들림 */
+@keyframes guitarShake3 {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(15px); }
+    100% { transform: translateY(0px); }
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #222;
+    color: white;
+}

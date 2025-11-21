@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 힐링송 소개</title>
+
+    <!-- Google Fonts 불러오기 -->
+    <!-- 첫 번째 노래용 손글씨 느낌 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <!-- 두 번째 노래용 강한 느낌 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <h1>나만의 힐링송 소개</h1>
+        <p>당신이 힘들 때 꺼내 듣는 노래 2곡을 소개합니다</p>
+    </header>
+
+
+    <!-- ===================== 첫 번째 노래 섹션 ===================== -->
+    <section id="song1" class="song-section">
+        <h2 class="song-title handwrite">Fabich - Ecstasy</h2>
+
+        <!-- ★ 이곳에 네가 첫 번째 노래에 대해 소개하고 싶은 내용을 직접 적어! -->
+        <!-- 예: 이 노래가 나에게 왜 힐링이 되는지, 어떤 순간에 듣는지 등을 적을 수 있음 -->
+        <p class="song-description handwrite">
+            <!-- 여기에 첫 번째 노래 설명을 작성하세요 -->
+        </p>
+
+        <!-- 배경 이미지 위에 들어가는 노래 정보 / 기타줄 느낌 테이블 -->
+        <table class="music-table uke-strings">
+            <tr><th>곡명</th><th>아티스트</th><th>링크</th></tr>
+            <tr class="uke-trigger">
+                <td>Ecstasy</td>
+                <td>Fabich</td>
+                <td>
+                    <a href="https://youtube.com/watch?v=9xId-lGvhc4&si=SFpH4P1AdImvnNWK" target="_blank">유튜브 링크</a>
+                </td>
+            </tr>
+        </table>
+
+        <!-- 유튜브 임베드 -->
+        <div class="youtube-wrapper">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/9xId-lGvhc4"
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+
+    <!-- ===================== 두 번째 노래 섹션 ===================== -->
+    <section id="song2" class="song-section">
+        <h2 class="song-title rock-font">Sum 41 - The Hell Song</h2>
+
+        <!-- ★ 여기도 네가 작성해야 하는 부분! -->
+        <p class="song-description rock-font">
+            <!-- 여기에 두 번째 노래 설명을 작성하세요 -->
+        </p>
+
+        <table class="music-table guitar-strings">
+            <tr><th>곡명</th><th>아티스트</th><th>링크</th></tr>
+            <tr class="guitar-trigger">
+                <td>The Hell Song</td>
+                <td>Sum 41</td>
+                <td>
+                    <a href="https://youtu.be/vm6XIFlMYYQ?si=_4DhlApxfbV3tKIy" target="_blank">유튜브 링크</a>
+                </td>
+            </tr>
+        </table>
+
+        <div class="youtube-wrapper">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/vm6XIFlMYYQ"
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+
+
+    <!-- ===================== FOOTER (내 정보) ===================== -->
+    <footer>
+        <h3>내 정보</h3>
+        <p>이메일: <strong>florida29@naver.com</strong></p>
+
+        <!-- ★ 네가 하고 싶은 말, 과제 제출용 메시지를 적기 좋은 부분 -->
+        <p>
+            <!-- 여기에 하고 싶은 말을 작성하세요 -->
+        </p>
+    </footer>
+
+
+    <!-- 메인 인터랙션 스크립트 -->
+    <script>
+        // 우크렐레 애니메이션 (강도 1 ↔ 2 번갈아서)
+        const ukeRow = document.querySelector(".uke-trigger");
+        let ukeToggle = false;
+
+        ukeRow.addEventListener("click", () => {
+            ukeToggle = !ukeToggle;
+            ukeRow.style.animation = ukeToggle
+                ? "ukeShake1 0.4s linear"
+                : "ukeShake2 0.4s linear";
+        });
+
+        // 기타 애니메이션 (강도 2 ↔ 3 번갈아서)
+        const guitarRow = document.querySelector(".guitar-trigger");
+        let guitarToggle = false;
+
+        guitarRow.addEventListener("click", () => {
+            guitarToggle = !guitarToggle;
+            guitarRow.style.animation = guitarToggle
+                ? "guitarShake2 0.4s linear"
+                : "guitarShake3 0.4s linear";
+        });
+    </script>
+
+</body>
+</html>
